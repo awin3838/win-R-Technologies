@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -108,17 +109,6 @@
                 }, 800);
             });
         });
-
-        // JavaScript to show the corresponding section when clicked
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(function(section) {
-                section.style.display = 'none';
-            });
-
-            // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
-        }
 
         // Initialize by hiding all sections and showing only "Who We Are" by default
         window.onload = function() {

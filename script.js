@@ -47,3 +47,26 @@ function movePartners() {
 
 // Set an interval to scroll the partners automatically every 2 seconds
 setInterval(movePartners, 1000); // 1000 ms = 1 second 
+
+function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+// Call this function on page load to hide all sections except the one you're currently on
+window.addEventListener('load', function () {
+    const hash = window.location.hash;  // Get the current hash (e.g., '#who-we-are')
+    if (hash) {
+        showSection(hash.substring(1));  // Remove the '#' and pass the section name
+    }
+});
+
