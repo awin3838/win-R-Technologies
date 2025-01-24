@@ -282,6 +282,125 @@ p {
     }
 }
 
+/* General Service Styles */
+.services-banner {
+    background-color: #F3F4F6;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services-banner h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+}
+
+.services-banner p {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Services Overview */
+.services-intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.services-intro h2 {
+    font-size: 32px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.services-intro p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Individual Service Styling */
+.service {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #F9F9F9;
+    margin: 20px 0;
+}
+
+.service-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.service-content img {
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-text {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.service-text h3 {
+    font-size: 28px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.service-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-text ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #007BFF;
+    padding: 15px 40px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
 /* Footer Section Styling */
 footer {
     background-color: #333;

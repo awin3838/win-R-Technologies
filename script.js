@@ -49,18 +49,22 @@ function movePartners() {
 setInterval(movePartners, 1000); // 1000 ms = 1 second 
 
 function showSection(sectionId) {
-    // Hide all sections
     const sections = document.querySelectorAll('.section');
+
+    if (sectionId=='all'){
+        sections.forEach(section => {
+            section.style.display = 'block';
+        });
+    } else {
     sections.forEach(section => {
         section.style.display = 'none';
     });
 
-    // Show the selected section
     const selectedSection = document.getElementById(sectionId);
     if (selectedSection) {
         selectedSection.style.display = 'block';
     }
-}
+}}
 
 // Call this function on page load to hide all sections except the one you're currently on
 window.addEventListener('load', function () {

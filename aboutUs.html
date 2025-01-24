@@ -18,17 +18,35 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="about-us.html" class="dropbtn">About Us</a>
-                    <ul class="dropdown-content">
+                    <a href="aboutUs.html" onclick="showSection('all')" class="dropbtn">About Us</a>
+                        <ul class="dropdown-content">
                         <li><a href="javascript:void(0);" onclick="showSection('who-we-are')">Who We Are</a></li>
                         <li><a href="javascript:void(0);" onclick="showSection('partnerships')">Partnerships</a></li>
                         <li><a href="javascript:void(0);" onclick="showSection('core-team')">Our Core Team</a></li>
                     </ul>
                 </li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="Our Services.html">Our Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Our Services.html#research" onclick="showSection('research')">Research</a></li>
+                        <li><a href="Our Services.html#design">Design</a></li>
+                        <li><a href="Our Services.html#training">Training</a></li>
+                        <li><a href="Our Services.html#staffing">Staffing & Recruitment</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Domain.html">Domain</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#telecom">Telecom</a></li>
+                        <li><a href="#banking">Banking</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#financial">Financial Services</a></li>
+                        <li><a href="#life-science">Life Science</a></li>
+                        <li><a href="#manufacturing">Manufacturing</a></li>
+                    </ul>
+                </li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -98,7 +116,7 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
     <script>
         // Smooth Scroll for internal links
         $(document).ready(function(){
@@ -112,7 +130,7 @@
 
         // Initialize by hiding all sections and showing only "Who We Are" by default
         window.onload = function() {
-            showSection('who-we-are');
+            showSection('all');
         };
     </script>
 </body>

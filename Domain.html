@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Win-R Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Win-R Technologies">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="Domain.html" onclick="showSection('all')" class="dropbtn">Domain</a>
+                        <ul class="dropdown-content">
+                        <li><a href="javascript:void(0);" onclick="showSection('telecom')">Telecom</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('banking')">Banking</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('healthcare')">HealthCare</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('financial')">Financial</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('life-science')">Life Science</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('manufacturing')">Manufacturing</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('BPO/RPO/KPO')">HBPO/RPO/KPO</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Our Services.html">Our Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Our Services.html#research" onclick="showSection('research')">Research</a></li>
+                        <li><a href="Our Services.html#design">Design</a></li>
+                        <li><a href="Our Services.html#training">Training</a></li>
+                        <li><a href="Our Services.html#staffing">Staffing & Recruitment</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Domain.html">Domain</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#telecom">Telecom</a></li>
+                        <li><a href="#banking">Banking</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#financial">Financial Services</a></li>
+                        <li><a href="#life-science">Life Science</a></li>
+                        <li><a href="#manufacturing">Manufacturing</a></li>
+                        <li><a href="#BPO/RPO/KPO">BPO/RPO/KPO</a></li>
+                    </ul>
+                </li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="telecom" class="section">
+            <div class="container">
+                <h2>Telecom</h2>
+                <p>Our telecom services cater to the dynamic needs of the telecommunications industry, helping companies stay ahead in the competitive market. We provide research, design, and staffing solutions for telecom operators and service providers</p>
+             </div>
+        </section>
+
+        <section id="banking" class="section">
+            <div class="container">
+                <h2>Banking</h2>
+                <p>We offer a comprehensive suite of services for the banking sector, including market research, regulatory compliance, and custom-designed solutions. Our team ensures that banks can operate efficiently while meeting customer expectations.</p>
+             </div>
+        </section>
+   
+        <section id="healthcare" class="section">
+            <div class="container">
+                <h2>HealthCare</h2>
+                <p>Win-R Technologies provides healthcare providers with innovative solutions ranging from technology implementation to research and training. Our services help improve patient care, streamline operations, and enhance overall efficiency.</p>
+             </div>
+        </section>
+
+        <section id="financial" class="section">
+            <div class="container">
+                <h2>Financial</h2>
+                <p>Our expertise in financial services supports businesses with market insights, investment strategies, and regulatory compliance. We assist firms in adapting to changing market conditions and driving profitability.</p>
+             </div>
+        </section>
+
+        <section id="life-science" class="section">
+            <div class="container">
+                <h2>Life Science</h2>
+                <p>We offer research and design services for life sciences companies, focusing on medical devices, pharmaceuticals, and biotechnology. Our solutions help drive innovation and accelerate product development in a highly regulated environment.</p>
+             </div>
+        </section>
+
+        <section id="manufacturing" class="section">
+            <div class="container">
+                <h2>Manufacturing</h2>
+                <p>Our manufacturing solutions help businesses optimize their production processes through advanced research, staff training, and operational support. We provide strategies for improving efficiency, reducing costs, and enhancing product quality.</p>
+             </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Win-R Technologies. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"><img src="assets/facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="assets/twitter.jpg" alt="Twitter"></a>
+            <a href="#"><img src="assets/Linkedin.jpg" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth Scroll for internal links
+        $(document).ready(function(){
+            $("a[href^='#']").on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 800);
+            });
+        });
+
+        // Initialize by hiding all sections and showing only "Who We Are" by default
+        window.onload = function() {
+            showSection('all');
+        };
+    </script>
+</body>
+</html>
