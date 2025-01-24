@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win-R Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Win-R Technologies Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#who-we-are">Who We Are</a></li>
+                        <li><a href="#partnerships">Partnerships</a></li>
+                        <li><a href="#core-team">Our Core Team</a></li>
+                    </ul>
+                </li>
+              
+                <li class="dropdown">
+                    <a href="#">Our Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#training">Training</a></li>
+                        <li><a href="#staffing">Staffing & Recruitment</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Industries</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#telecom">Telecom</a></li>
+                        <li><a href="#banking">Banking</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#financial">Financial Services</a></li>
+                        <li><a href="#life-science">Life Science</a></li>
+                        <li><a href="#manufacturing">Manufacturing</a></li>
+                    </ul>
+                </li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner" id="banner-section">
+        <div class="banner-content">
+            <div class="banner-slide" id="banner-1">
+                <img src="assets/banner1.jpg" alt="Research Services">
+                <p>Research Services</p>
+            </div>
+            <div class="banner-slide" id="banner-2">
+                <img src="assets/banner2.jpg" alt="Design Services">
+                <p>Design Services</p>
+            </div>
+            <div class="banner-slide" id="banner-3">
+                <img src="assets/banner3.jpg" alt="Training Services">
+                <p>Training Services</p>
+            </div>
+            <div class="banner-slide" id="banner-4">
+                <img src="assets/banner4.jpg" alt="Staffing & Recruitment">
+                <p>Staffing & Recruitment</p>
+            </div>
+        </div>
+        <button class="prev" onclick="moveBanner(-1)">&#10094;</button>
+        <button class="next" onclick="moveBanner(1)">&#10095;</button>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="partners">
+        <h2>Our Trusted Partners</h2>
+        <div class="partners-logos">
+            <img src="assets/Partner1.jpg" alt="Partner 1">
+            <img src="assets/Partner2.jpg" alt="Partner 2">
+            <img src="assets/Partner3.jpg" alt="Partner 3">
+            <img src="assets/Partner4.jpg" alt="Partner 4">
+            <img src="assets/Partner5.jpg" alt="Partner 5">
+            <img src="assets/Partner6.jpg" alt="Partner 6">
+            <img src="assets/Partner7.jpg" alt="Partner 7">
+            <img src="assets/Partner8.jpg" alt="Partner 8">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Win-R Technologies | All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://facebook.com"><img src="assets/facebook.jpg" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="assets/twitter.jpg" alt="Twitter"></a>
+            <a href="https://linkedin.com"><img src="assets/Linkedin.jpg" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <!-- Script for Banner Navigation -->
+    <script>
+        let currentSlideIndex = 0; // Track the current slide index
+        const slides = document.querySelectorAll('.banner-slide'); // Select all banner slides
+
+        // Function to move the banner to the next or previous slide
+        function moveBanner(step) {
+            currentSlideIndex += step;
+
+            // Loop back to the first slide if we go past the last one
+            if (currentSlideIndex >= slides.length) {
+                currentSlideIndex = 0;
+            } 
+            // Loop to the last slide if we go before the first one
+            if (currentSlideIndex < 0) {
+                currentSlideIndex = slides.length - 1;
+            }
+
+            // Hide all slides and show the one at the current index
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === currentSlideIndex) ? 'block' : 'none';
+            });
+        }
+
+        // Initialize the banner (Show the first slide by default)
+        moveBanner(0);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Win-R Technologies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Win-R Technologies">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about-us.html" class="dropbtn">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="javascript:void(0);" onclick="showSection('who-we-are')">Who We Are</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('partnerships')">Partnerships</a></li>
+                        <li><a href="javascript:void(0);" onclick="showSection('core-team')">Our Core Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="who-we-are" class="section">
+            <div class="container">
+                <h2>Who We Are</h2>
+                <p>Win-R Technologies is a leading provider of innovative technology solutions, specializing in development services, staffing, and recruitment. We aim to empower businesses to thrive in a fast-changing technological landscape. Our deep expertise, dedication to excellence, and forward-thinking approach drive the growth of our clients across various sectors, from telecom to healthcare.</p>
+                <p>Founded with the vision to bridge the gap between technology and business, we strive to create lasting value for every organization we collaborate with. Whether it's developing cutting-edge software, providing top-notch staffing, or offering bespoke solutions tailored to specific business needs, we are committed to delivering results that matter.</p>
+            </div>
+        </section>
+
+        <section id="partnerships" class="section">
+            <div class="container">
+                <h2>Our Partnerships</h2>
+                <p>At Win-R Technologies, we understand the value of strategic collaborations. Over the years, we have built strong partnerships with leading organizations in the technology sector. These partnerships enable us to stay at the forefront of innovation and deliver exceptional services to our clients.</p>
+                <p>Through our alliances with technology providers, consultants, and thought leaders, we are able to offer cutting-edge solutions that meet the evolving demands of modern businesses. Our partners share our commitment to excellence and drive continuous growth and transformation for our clients.</p>
+                <p>We believe that great things happen when like-minded organizations come together, which is why our partnerships are at the heart of everything we do.</p>
+            </div>
+        </section>
+
+        <section id="core-team" class="section">
+            <div class="container">
+                <h2>Our Core Team</h2>
+                <p>Our core team is made up of experienced professionals from diverse backgrounds, each bringing a wealth of knowledge and expertise to the table. Together, we are committed to shaping the future of technology and innovation.</p>
+
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="assets/team/john-doe.jpg" alt="Awinash Atkuri">
+                        <h3>Awinash Atkuri</h3>
+                        <p>CEO & Founder</p>
+                        <p>Awinash is a visionary leader with over 15 years of experience in the tech industry. As the CEO, he leads the company with a focus on innovation, customer satisfaction, and long-term growth.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="assets/team/jane-smith.jpg" alt="Swarupa Miriyala">
+                        <h3>Swarupa Miriyala</h3>
+                        <p>CTO & Head of Technology</p>
+                        <p>Swarupa is a highly skilled technologist with a passion for cutting-edge development. She oversees all technical operations, ensuring that Win-R Technologies stays ahead of industry trends.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="assets/team/robert-brown.jpg" alt="Sravani Miriyala">
+                        <h3>Sravani Miriyala M</h3>
+                        <p>COO</p>
+                        <p>With her extensive experience in operations management, Sravani ensures that Win-R Technologies runs smoothly and efficiently, delivering consistent results to clients.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="assets/team/emily-white.jpg" alt="Alekya Atkuri">
+                        <h3>Alekya Atkuri</h3>
+                        <p>Head of Recruitment & Staffing</p>
+                        <p>Alekya is dedicated to finding and placing the best talent in the tech industry. Her expertise in recruitment ensures that Win-R Technologies builds high-performing teams for clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Win-R Technologies. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"><img src="assets/facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="assets/twitter.jpg" alt="Twitter"></a>
+            <a href="#"><img src="assets/Linkedin.jpg" alt="LinkedIn"></a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Smooth Scroll for internal links
+        $(document).ready(function(){
+            $("a[href^='#']").on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 800);
+            });
+        });
+
+        // JavaScript to show the corresponding section when clicked
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Initialize by hiding all sections and showing only "Who We Are" by default
+        window.onload = function() {
+            showSection('who-we-are');
+        };
+    </script>
+</body>
+</html>
