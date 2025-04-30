@@ -45,26 +45,30 @@ function movePartners() {
     partnerIndex = (partnerIndex + 1) % partnerCount;
 }
 
-// Set an interval to scroll the partners automatically every 2 seconds
-setInterval(movePartners, 1000); // 1000 ms = 1 second 
+// Set an interval to scroll the partners automatically every 2 seconds (slower for better UX)
+setInterval(movePartners, 2000); // 2000 ms = 2 seconds 
 
+// Show or hide sections based on the sectionId
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
 
-    if (sectionId=='all'){
+    if (sectionId === 'all') {
         sections.forEach(section => {
             section.style.display = 'block';
         });
     } else {
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
 
-    const selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        } else {
+            console.error(`Section with ID ${sectionId} not found.`);
+        }
     }
-}}
+}
 
 // Call this function on page load to hide all sections except the one you're currently on
 window.addEventListener('load', function () {
@@ -74,6 +78,7 @@ window.addEventListener('load', function () {
     }
 });
 
+// Fetching technology news feed
 document.addEventListener("DOMContentLoaded", () => {
     const newsList = document.getElementById("news-feed");
   
@@ -96,5 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("News fetch failed:", error);
         newsList.innerHTML = "<li>Unable to load news feed.</li>";
       });
-  });
-    
+});
