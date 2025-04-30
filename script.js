@@ -74,3 +74,27 @@ window.addEventListener('load', function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const newsList = document.getElementById("news-feed");
+  
+    fetch("https://gnews.io/api/v4/search?q=technology&lang=en&country=us&max=5&apikey=78befdb661c7e2a43d34ac2da292689b")
+      .then(response => response.json())
+      .then(data => {
+        newsList.innerHTML = "";
+  
+        if (data.articles && data.articles.length > 0) {
+          data.articles.forEach(article => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${article.title}</strong><br><a href="${article.url}" target="_blank">Read more</a>`;
+            newsList.appendChild(li);
+          });
+        } else {
+          newsList.innerHTML = "<li>No news found at the moment.</li>";
+        }
+      })
+      .catch(error => {
+        console.error("News fetch failed:", error);
+        newsList.innerHTML = "<li>Unable to load news feed.</li>";
+      });
+  });
+    

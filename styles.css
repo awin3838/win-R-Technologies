@@ -401,12 +401,165 @@ p {
     color: #fff;
 }
 
+/* Layout for the contact us section */
+.contact-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    align-items: flex-start;
+    gap: 40px; /* Increased spacing for better visual separation */
+    padding: 40px 20px;
+    max-width: 1400px; /* Restrict full width to center */
+    margin: 0 auto; /* Center the container */
+    box-sizing: border-box;
+  }  
+  
+  /* Live Tech News Feed Box */
+  .tech-updates-box,
+.contact-form-container {
+  flex: 1 1 400px; /* Allow boxes to grow/shrink but prefer 400px width */
+  max-width: 650px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+ 
+/* Tech Updates Box title */
+  .tech-updates-box h2 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.2em;
+  }
+  
+  /* Title for each section in Live News Feed */
+  .tech-updates-box h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 20px;
+    font-weight: normal;
+  }
+  
+  /* Container for scrolling tech news */
+  .news-feed-container {
+    overflow: hidden;
+    height: 200px; /* Set height for news scroll */
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* List of Tech News */
+  .news-feed {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    animation: scrollNews 20s linear infinite; /* Slower scrolling */
+  }
+  
+  /* Individual List Items for scrolling */
+  .news-feed li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+  
+  /* Scroll animation */
+  @keyframes scrollNews {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  /* Links inside Tech Updates Box */
+  .tech-updates-box a {
+    color: #007bff;
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+  
+  .tech-updates-box a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Form Styling */
+  .contact-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form-container label {
+    margin-top: 10px;
+  }
+  
+  .contact-form-container input,
+  .contact-form-container textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form-container button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+  }
+  
+  .social-media img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-us-container {
+      flex-direction: column;
+    }
+  }
+  
+      
 /* Footer Section Styling */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
+    border-top: 2px solid #2575fc;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -420,4 +573,13 @@ footer .social-media a {
 
 footer .social-media img {
     max-width: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.1);
+}
+
+footer .social-media {
+    margin-top: 20px;
 }
