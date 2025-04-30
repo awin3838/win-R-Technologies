@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Win-R Technologies</title>
+    <title>Domain | Win-R Technologies</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -11,45 +11,46 @@
 </head>
 <body>
     <!-- Header Section -->
-  <header>
-    <div class="logo">
-      <img src="assets/logo.png" alt="Win-R Technologies" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li class="dropdown">
-          <a href="aboutUs.html">About Us</a>
-          <ul class="dropdown-content">
-            <li><a href="aboutUs.html#who-we-are" onclick="showSection('who-we-are')">Who We Are</a></li>
-            <li><a href="aboutUs.html#partnerships" onclick="showSection('partnerships')">Partnerships</a></li>
-            <li><a href="aboutUs.html#core-team" onclick="showSection('core-team')">Our Core Team</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="Our Services.html">Our Services</a>
-          <ul class="dropdown-content">
-            <li><a href="Our Services.html#research">Research</a></li>
-            <li><a href="Our Services.html#design">Design</a></li>
-            <li><a href="Our Services.html#training">Training</a></li>
-            <li><a href="Our Services.html#staffing">Staffing & Recruitment</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="Domain.html">Domain</a>
-          <ul class="dropdown-content">
-            <li><a href="#telecom">Telecom</a></li>
-            <li><a href="#banking">Banking</a></li>
-            <li><a href="#healthcare">Healthcare</a></li>
-            <li><a href="#financial">Financial Services</a></li>
-            <li><a href="#life-science">Life Science</a></li>
-            <li><a href="#manufacturing">Manufacturing</a></li>
-          </ul>
-        </li>
-        <li><a href="contactUs.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header> 
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Win-R Technologies">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="aboutUs.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="aboutUs.html#who-we-are">Who We Are</a></li>
+                        <li><a href="aboutUs.html#partnerships">Partnerships</a></li>
+                        <!-- <li><a href="aboutUs.html#core-team">Our Core Team</a></li> -->
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Our Services.html">Our Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Our Services.html#research">Research</a></li>
+                        <li><a href="Our Services.html#design">Design</a></li>
+                        <li><a href="Our Services.html#training">Training</a></li>
+                        <li><a href="Our Services.html#staffing">Staffing & Recruitment</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Domain.html">Domain</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#telecom">Telecom</a></li>
+                        <li><a href="#banking">Banking</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#financial">Financial Services</a></li>
+                        <li><a href="#life-science">Life Science</a></li>
+                        <li><a href="#manufacturing">Manufacturing</a></li>
+                        <li><a href="#bpo/kpo/rpo">BPO/KPO/RPO</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section id="telecom" class="section">
@@ -75,7 +76,7 @@
 
         <section id="financial" class="section">
             <div class="container">
-                <h2>Financial</h2>
+                <h2>Financial Services</h2>
                 <p>Our expertise in financial services supports businesses with market insights, investment strategies, and regulatory compliance. We assist firms in adapting to changing market conditions and driving profitability.</p>
             </div>
         </section>
@@ -96,7 +97,7 @@
 
         <section id="bpo" class="section">
             <div class="container">
-                <h2>BPO/RPO/KPO</h2>
+                <h2>BPO / RPO / KPO</h2>
                 <p>We deliver expert services across BPO, RPO, and KPO domains. From business process outsourcing and recruitment process optimization to knowledge process support, our offerings ensure cost-effective and scalable operations.</p>
             </div>
         </section>
@@ -112,12 +113,12 @@
     </footer>
 
     <script>
-        // Smooth Scroll for internal links
-        $(document).ready(function(){
+        // Smooth scroll for internal links
+        $(document).ready(function () {
             $("a[href^='#']").on('click', function (e) {
-                e.preventDefault();
                 const target = $(this).attr('href');
-                if ($(target).length) {
+                if (target.length && $(target).length) {
+                    e.preventDefault();
                     $('html, body').animate({
                         scrollTop: $(target).offset().top
                     }, 800);
@@ -125,9 +126,11 @@
             });
         });
 
-        // Show all sections on load
-        window.onload = function() {
-            document.querySelectorAll('.section').forEach(section => section.style.display = 'block');
+        // Show all sections by default
+        window.onload = function () {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'block';
+            });
         };
     </script>
 </body>
